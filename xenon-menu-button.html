@@ -1,0 +1,29 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../paper-menu-button/paper-menu-button.html"/>
+<link rel="import" href="../paper-item/paper-item.html"/>
+<link rel="import" href="../paper-icon-button/paper-icon-button.html"/>
+<link rel="import" href="../iron-icons/iron-icons.html"/>
+<link rel="import" href="../iron-icon/iron-icon.html"/>
+<dom-module id="xenon-menu-button">
+    <template>
+        <style>
+            paper-menu-button { padding:0px }
+        </style>
+        <paper-menu-button horizontal-align="{{horizontalAlign}}" vertical-offset="{{verticalOffset}}">
+            <iron-icon icon="{{icon}}" class="dropdown-trigger"></iron-icon>
+            <paper-menu class="dropdown-content">
+                <content></content>
+            </paper-menu>
+        </paper-menu-button>
+    </template>
+    <script>
+    Polymer({
+        is:"xenon-menu-button", 
+        properties: {
+            icon: { type:String, value: "more-vert" }, 
+            horizontalAlign: { type:String, value:"right" },
+            verticalOffset: { type:Number, value: 32 }
+        }
+    });
+    </script>
+</dom-module>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="../../webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="../../polymer/polymer.html"/>
+        <link rel="import" href="../../paper-item/paper-item.html"/>
+        <link rel="import" href="../xenon-menu-button.html"/>
+        <style>
+            body { background-color: gainsboro }
+        </style>
+    </head>
+    <body>
+        <dom-module id="demo-element">
+            <template>
+                <center>
+                <xenon-menu-button>
+                    <paper-item>Add New Item</paper-item>
+                    <paper-item>Archive</paper-item>
+                    <paper-item>Delete</paper-item>
+                </xenon-menu-button>
+                </center>
+            </template>
+            <script>
+                HTMLImports.whenReady(function () {
+                    Polymer({
+                        is: 'demo-element', 
+                        properties: {
+                        }, 
+                        ready: function() {
+                        }
+                    });
+                });
+            </script>
+        </dom-module>
+        <demo-element></demo-element>
+    </body>
+</html>

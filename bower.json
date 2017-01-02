@@ -1,0 +1,19 @@
+{
+  "name": "xenon-table",
+  "authors": [
+    "Don Archer <drasticp@gmail.com>"
+  ],
+  "description": "Material menu button for dropdowns in tables and headers.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [],
+  "dependencies": {
+    "iron-icon": "polymerelements/iron-icon#^1.0.0",
+    "iron-icons": "polymerelements/iron-icons#^1.0.0",
+    "paper-menu-button": "polymerelements/paper-menu-button#^1.0.0",
+    "paper-icon-button": "polymerelements/paper-icon-button#^1.0.0",
+    "paper-item": "polymerelements/paper-item#^1.0.0",
+    "polymer": "Polymer/polymer#^1.1.0"
+  }
+}
