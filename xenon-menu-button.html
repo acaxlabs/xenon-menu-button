@@ -8,10 +8,11 @@
     <template>
         <style>
             paper-menu-button { padding:0px }
+            paper-menu{padding:0px;}
         </style>
         <paper-menu-button horizontal-align="{{horizontalAlign}}" vertical-offset="{{verticalOffset}}">
             <iron-icon icon="{{icon}}" class="dropdown-trigger"></iron-icon>
-            <paper-menu class="dropdown-content">
+            <paper-menu class="dropdown-content" selected="[[selected]]">
                 <content></content>
             </paper-menu>
         </paper-menu-button>
@@ -22,7 +23,8 @@
         properties: {
             icon: { type:String, value: "more-vert" }, 
             horizontalAlign: { type:String, value:"right" },
-            verticalOffset: { type:Number, value: 32 }
+            verticalOffset: { type: Number, value: 32 },
+            selected:Number
         }
     });
     </script>
