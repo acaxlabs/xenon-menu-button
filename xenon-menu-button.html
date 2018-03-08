@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html"/>
-<link rel="import" href="../paper-menu-button/paper-menu-button.html"/>
+<link rel="import" href="../paper-menu-button/paper-menu-button.html" />
+<link rel="import" href="../paper-menu/paper-menu.html" />
 <link rel="import" href="../paper-item/paper-item.html"/>
 <link rel="import" href="../paper-icon-button/paper-icon-button.html"/>
 <link rel="import" href="../iron-icons/iron-icons.html"/>
@@ -11,7 +12,7 @@
         </style>
         <paper-menu-button horizontal-align="{{horizontalAlign}}" vertical-offset="{{verticalOffset}}">
             <iron-icon icon="{{icon}}" class="dropdown-trigger"></iron-icon>
-            <paper-menu class="dropdown-content" selected="[[selected]]">
+            <paper-menu class="dropdown-content" selected="{{selected}}" attr-for-selected="[[attrForSelected]]">
                 <content></content>
             </paper-menu>
         </paper-menu-button>
@@ -22,7 +23,9 @@
         properties: {
             icon: { type:String, value: "more-vert" }, 
             horizontalAlign: { type:String, value:"right" },
-            verticalOffset: { type: Number, value: 32 }
+            verticalOffset: { type: Number, value: 32 },
+            selected: { type: String, notify: true },
+            attrForSelected: { type: String, notify: true }
         }
     });
     </script>
